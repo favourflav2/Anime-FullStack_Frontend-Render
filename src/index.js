@@ -14,10 +14,10 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let persistor = persistStore(store);
-// production clientId ...  265710711280-j6kg5vvh6tu0vaeqm97cvcoshgq2rss0.apps.googleusercontent.com
+// production clientId ...  265710711280-k1dgqglmkjteuehaa0jdjs3cc3ooabu9.apps.googleusercontent.com
 
 const devEnv = process.env.NODE_ENV !== "production"
-const clientId =devEnv? "612343465599-o9drnv452lnn0pavn6b1mcq6ms5pt4bp.apps.googleusercontent.com" : "265710711280-j6kg5vvh6tu0vaeqm97cvcoshgq2rss0.apps.googleusercontent.com"
+const clientId =devEnv? "612343465599-o9drnv452lnn0pavn6b1mcq6ms5pt4bp.apps.googleusercontent.com" : "265710711280-k1dgqglmkjteuehaa0jdjs3cc3ooabu9.apps.googleusercontent.com"
 root.render(
    <React.StrictMode>
     <GoogleOAuthProvider clientId={clientId}>
