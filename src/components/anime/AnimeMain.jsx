@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector} from 'react-redux';
 import {BsSearch} from 'react-icons/bs'
 import { animeSearch, clearCurrentPage, clearSearchAnime } from '../../redux/features/animeSlice';
-export default function AnimeMain() {
+export default function AnimeMain({setError}) {
 
   const {loading,currentPage} = useSelector(state => state.anime)
   const [searchValue, setSearchState] = React.useState({
@@ -20,10 +20,11 @@ export default function AnimeMain() {
       dispatch(clearCurrentPage())
     }
     dispatch(clearCurrentPage())
+    setError(false)
   }
 
   
-  
+ 
 
   
   function handleChange(e){

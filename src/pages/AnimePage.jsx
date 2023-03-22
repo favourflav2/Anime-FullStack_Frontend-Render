@@ -15,10 +15,19 @@ export default function AnimePage() {
     (state) => state.anime
   );
   const dispatch = useDispatch();
+  const [error,setError] = React.useState(false)
 
   React.useEffect(()=>{
     dispatch(topAnime())
   },[dispatch])
+
+  
+
+ React.useEffect(()=>{
+    if(searchAnimes?.length <= 0){
+      setError(true)
+    }
+ },[searchAnimes])
 
 
   const postPage= 8
@@ -58,11 +67,12 @@ export default function AnimePage() {
         ))}
       </div>
       <div className=" flex flex-col body_">
-        <AnimeMain  />
+        <AnimeMain  setError={setError}/>
+
+        {error && <div className="flex items-center justify-center text-2xl text-red-400 mt-7"><span>No results found</span></div> }
 
         <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 flex flex-col">
-          {searchAnimes?.length === 0 && <div className="flex items-center justify-center text-2xl text-red-400">No results found</div> }
-          {currentP.map((item) => (
+          {currentP?.map((item) => (
             <Tilt key={item.id}>
               <AnimeCard {...item} />
             </Tilt>

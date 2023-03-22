@@ -52,7 +52,7 @@ const animeSlice = createSlice({
     initialState:{
         topAnimes: [],
         animesQuery: [],
-        searchAnimes:[],
+        searchAnimes:null,
         bestAnime:[],
         loading: false,
         currentPage: 1,
@@ -69,7 +69,7 @@ const animeSlice = createSlice({
             state.currentPage = 1
         },
         clearSearchAnime:(state)=>{
-            state.searchAnimes = []
+            state.searchAnimes = null
             state.numberOfPages= null
         },
         clearTopAnime:(state)=>{

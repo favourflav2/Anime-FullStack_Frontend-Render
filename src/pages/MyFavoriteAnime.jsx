@@ -7,7 +7,7 @@ import Tilt from "react-parallax-tilt";
 
 export default function MyFavoriteAnime() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.anime);
+  const {bestAnime:animeData,loading} = useSelector((state) => state.anime);
   // let topTier = [
   //   "Shingeki no Kyojin",
   //   "Vinland Saga",
@@ -32,42 +32,47 @@ export default function MyFavoriteAnime() {
     "Death Note",
   ]);
 
+
   React.useEffect(() => {
     dispatch(bestAnime());
   }, [dispatch]);
 
-  React.useEffect(() => {
-    function grabAnimeData() {
-      let arr = [];
-      let arr2 = [];
-      arrayValue.forEach((item) => {
-        state?.bestAnime?.forEach((value) => {
-          if (value.title.default === item) {
-            arr.push(value);
-          } else {
-            arr2.push(value);
-          }
-        });
-      });
-      return arr;
-    }
-    function grabOtherData() {
-      let result = state?.bestAnime;
-      let cash = result;
-      cash = cash.filter((item) => {
-        return !arrayValue.includes(item.title.default);
-      });
+   React.useEffect(() => {
 
-      setOtherAnime(cash);
-    }
+  
+      function getTopAnime(){
+        let arr = []
+        let arr2 = []
+        arrayValue?.forEach((item) =>{
+          animeData?.forEach(value =>{
+            if(value?.title?.default === item){
+              arr.push(value)
+            }else{
+              arr2.push(value)
+            }
+          })
+        })
+        return arr
+      }
+      
+      setTopTierState(getTopAnime())
 
-    grabOtherData();
+       function otherAnimeData(){
+         let result = animeData.slice()
+         let newArr = result.filter(item => {
+           return !arrayValue.includes(item?.title?.default)
+         })
+         newArr = newArr.filter(item => item !== null)
+         return newArr
+       }
+      setOtherAnime(otherAnimeData())
+     
+     
+   }, [animeData,arrayValue]);
 
-    let result = grabAnimeData();
-    setTopTierState(result);
-  }, [state?.bestAnime, arrayValue]);
+  
 
-  if (state.loading) {
+  if (loading) {
     return (
       <div className="flex items-center justify-center space-x-2">
         <div
