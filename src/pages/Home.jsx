@@ -9,6 +9,7 @@ import { setUpdatedUser } from '../redux/features/authSlice';
 export default function Home() {
   const dispatch = useDispatch()
   const { homeCurrentPage,animesQuery,homeNumberOfPages} = useSelector(state => state.anime)
+  const [homePage,setHomePage] = React.useState(1)
   const postPerPage = 8
   const lastPostIndex = homeCurrentPage * postPerPage
   const firstsPostIndex = lastPostIndex - postPerPage
@@ -17,8 +18,8 @@ export default function Home() {
   
 
   React.useEffect(()=>{
-    dispatch(topAnimeQuery(homeCurrentPage))
-  },[dispatch,homeCurrentPage])
+    dispatch(topAnimeQuery(homePage))
+  },[dispatch,homePage])
 
   React.useEffect(()=>{
     dispatch(setUpdatedUser())
@@ -45,7 +46,7 @@ export default function Home() {
       </div>
 
       <Pagination
-          setCurrentPage={setHomeCurrentPage}
+          setCurrentPage={setHomePage}
           numberOfPages={homeNumberOfPages}
           dispatch={dispatch}
           currentPage={homeCurrentPage}
