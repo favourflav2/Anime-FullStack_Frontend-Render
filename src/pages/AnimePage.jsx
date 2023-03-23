@@ -11,11 +11,12 @@ import Tilt from "react-parallax-tilt";
 
 export default function AnimePage() {
   
-  const { searchAnimes, numberOfPages, currentPage, loading,topAnimes } = useSelector(
+  const { searchAnimes, numberOfPages, loading,topAnimes } = useSelector(
     (state) => state.anime
   );
   const dispatch = useDispatch();
   const [error,setError] = React.useState(false)
+  const [currentPage,setCurrentPage] = React.useState(1)
 
   React.useEffect(()=>{
     dispatch(topAnime())
