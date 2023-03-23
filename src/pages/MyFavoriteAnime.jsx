@@ -39,34 +39,36 @@ export default function MyFavoriteAnime() {
 
    React.useEffect(() => {
 
-  
-      function getTopAnime(){
-        let arr = []
-        let arr2 = []
-        arrayValue?.forEach((item) =>{
-          animeData?.forEach(value =>{
-            if(value?.title?.default === item){
-              arr.push(value)
-            }else{
-              arr2.push(value)
-            }
-          })
+  if(animeData.length){
+    function getTopAnime(){
+      let arr = []
+      let arr2 = []
+      arrayValue?.forEach((item) =>{
+        animeData?.forEach(value =>{
+          if(value?.title?.default === item){
+            arr.push(value)
+          }else{
+            arr2.push(value)
+          }
         })
-        return arr
-      }
-      
-      setTopTierState(getTopAnime())
+      })
+      return arr
+    }
+    
+    setTopTierState(getTopAnime())
 
-       function otherAnimeData(){
-         let result = animeData.slice()
-         let newArr = result.filter(item => {
-           return !arrayValue.includes(item?.title?.default)
-         })
-         newArr = newArr.filter(item => item !== null)
-         return newArr
-       }
-      setOtherAnime(otherAnimeData())
-     
+     function otherAnimeData(){
+       let result = animeData.slice()
+       let newArr = result.filter(item => {
+         return !arrayValue.includes(item?.title?.default)
+       })
+       newArr = newArr.filter(item => item !== null)
+       return newArr
+     }
+    setOtherAnime(otherAnimeData())
+   
+  }
+      
      
    }, [animeData,arrayValue]);
 
