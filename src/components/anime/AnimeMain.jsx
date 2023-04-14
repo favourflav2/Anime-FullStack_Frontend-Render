@@ -49,18 +49,20 @@ export default function AnimeMain({setError}) {
         </div>
         
 
-        <form className='flex flex-col md:flex-row items-center' onSubmit={(e)=>handleSubmit(e)}>
+        <form className='flex items-center justify-center' onSubmit={(e)=>handleSubmit(e)}>
           <input 
             type="text" 
             className='lg:w-[500px] w-auto shadow appearance-none border-2 rounded-2xl px-3 py-3 bg-neutral-500 text-white leading-tight focus:outline-none focus:shadow-outline 
-            mt-5 flex mb-5'
+            flex sm:mb-5 mb-2 mt-5'
             placeholder='Search for anime'
             value={searchValue.title}
             name="title"
             onChange={(e)=>handleChange(e)}
             />
+
             
-            <button onClick={(e)=>handleSubmit(e)} disabled={loading} className='ml-3 w-[40px] h-[40px] flex items-center justify-center rounded-lg'>
+            
+            <button onClick={(e)=>handleSubmit(e)} disabled={loading} className='ml-3 w-[40px] h-[40px] mt-5 sm:mb-5 mb-2 flex items-center justify-center rounded-lg'>
             <BsSearch className=' text-[30px] hover:text-green-500 text-gray-200'/>
             </button>
             

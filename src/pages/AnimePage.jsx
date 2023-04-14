@@ -58,8 +58,8 @@ export default function AnimePage() {
 
   return (
     
-    <div className="w-screen h-screen  grid-cols-[200px_1fr] grid">
-      <div className="bg-[#2a2a35] border-r-2 border-gray-400 flex flex-col ">
+    <div className="w-screen h-screen  sm:grid-cols-[200px_1fr] sm:grid flex bg-[#2a2a35]" >
+      <div className="bg-[#2a2a35] border-r-2 border-gray-400 sm:flex hidden flex-col ">
 
       <h3 className="text-xl font-extrabold my-4 flex items-center justify-center">Top Animes Now</h3>
       {/* <button onClick={()=>dispatch(clearTopAnime())}>cleare</button> */}
@@ -67,12 +67,12 @@ export default function AnimePage() {
            <Sidebar key={index} {...item} />
         ))}
       </div>
-      <div className=" flex flex-col body_">
+      <div className=" flex flex-col h-full w-full bg-[#161623]">
         <AnimeMain  setError={setError}/>
 
         {error && <div className="flex items-center justify-center text-2xl text-red-400 mt-7"><span>No results found</span></div> }
 
-        <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 flex flex-col">
+        <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 flex flex-col ">
           {currentP?.map((item) => (
             <Tilt key={item.id}>
               <AnimeCard {...item} />

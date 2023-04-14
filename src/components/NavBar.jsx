@@ -38,7 +38,7 @@ export default function NavBar() {
             
           {user?.user?._id? <><li>
               <Link to='/'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Home
               </button>
               </Link>
@@ -46,7 +46,7 @@ export default function NavBar() {
 
               <li>
               <Link to='/best'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Best Animes
               </button>
               </Link>
@@ -54,7 +54,7 @@ export default function NavBar() {
 
               <li>
             <Link to='/anime'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Search For Anime
               </button>
               </Link>
@@ -62,7 +62,7 @@ export default function NavBar() {
 
             <li>
             <Link to='/dashboard'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Dashboard
               </button>
               </Link>
@@ -70,6 +70,7 @@ export default function NavBar() {
 
             <li className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
               <button className="bg-green-200 w-[70px] rounded-2xl hover:bg-gray-900 " onClick={()=>{
+                setOpen(false)
                 navigate('/')
                 dispatch(setLogout())
               }}>Log Out</button>
@@ -78,7 +79,7 @@ export default function NavBar() {
              : <>
              <li>
               <Link to='/'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Home
               </button>
               </Link>
@@ -86,7 +87,7 @@ export default function NavBar() {
 
               <li>
               <Link to='/best'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Best Animes
               </button>
               </Link>
@@ -94,7 +95,7 @@ export default function NavBar() {
 
               <li>
               <Link to='/anime'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Search For Anime
               </button>
               </Link>
@@ -102,7 +103,7 @@ export default function NavBar() {
 
              <li>
             <Link to='/signup'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Sign Up
               </button>
               </Link>
@@ -110,7 +111,7 @@ export default function NavBar() {
 
             <li>
             <Link to='/login'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold">
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
                 Log In
               </button>
               </Link>
