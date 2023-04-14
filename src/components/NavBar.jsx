@@ -38,7 +38,7 @@ export default function NavBar() {
             
           {user?.user?._id? <><li>
               <Link to='/'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)} >
                 Home
               </button>
               </Link>
@@ -46,7 +46,7 @@ export default function NavBar() {
 
               <li>
               <Link to='/best'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)} >
                 Best Animes
               </button>
               </Link>
@@ -54,7 +54,7 @@ export default function NavBar() {
 
               <li>
             <Link to='/anime'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)} >
                 Search For Anime
               </button>
               </Link>
@@ -62,7 +62,7 @@ export default function NavBar() {
 
             <li>
             <Link to='/dashboard'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)} >
                 Dashboard
               </button>
               </Link>
@@ -79,7 +79,7 @@ export default function NavBar() {
              : <>
              <li>
               <Link to='/'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)}>
                 Home
               </button>
               </Link>
@@ -87,7 +87,7 @@ export default function NavBar() {
 
               <li>
               <Link to='/best'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)}>
                 Best Animes
               </button>
               </Link>
@@ -95,7 +95,7 @@ export default function NavBar() {
 
               <li>
               <Link to='/anime'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)}>
                 Search For Anime
               </button>
               </Link>
@@ -103,7 +103,7 @@ export default function NavBar() {
 
              <li>
             <Link to='/signup'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)}>
                 Sign Up
               </button>
               </Link>
@@ -111,7 +111,7 @@ export default function NavBar() {
 
             <li>
             <Link to='/login'>
-              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" >
+              <button className="lg:px-5 sm:max-md:ml-3 sm:max-md:mt-3 py-2 block hover:text-blue-700 font-semibold" onClick={()=>setOpen(false)}>
                 Log In
               </button>
               </Link>
