@@ -72,7 +72,7 @@ export default function AnimePage() {
 
         {error && <div className="flex items-center justify-center text-2xl text-red-400 mt-7"><span>No results found</span></div> }
 
-        <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 flex flex-col ">
+        <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 flex flex-col bg-[#161623] ">
           {currentP?.map((item) => (
             <Tilt key={item.id}>
               <AnimeCard {...item} />
@@ -92,3 +92,5 @@ export default function AnimePage() {
     </div>
   );
 }
+
+// " flex flex-col h-full w-full bg-[#161623]"
