@@ -59,14 +59,14 @@ export default function AnimePage() {
   return (
     
     <div className="w-screen h-screen  sm:grid-cols-[200px_1fr] sm:grid flex bg-[#2a2a35]" >
-      <div className="bg-[#2a2a35] border-r-2 border-gray-400 sm:flex hidden flex-col ">
+       <div className="bg-[#2a2a35] border-r-2 border-gray-400 sm:flex hidden flex-col ">
 
       <h3 className="text-xl font-extrabold my-4 flex items-center justify-center">Top Animes Now</h3>
       {/* <button onClick={()=>dispatch(clearTopAnime())}>cleare</button> */}
-        {topAnimes[0]?.map((item,index)=>(
+        {topAnimes[0] && topAnimes[0]?.map((item,index)=>(
            <Sidebar key={index} {...item} />
         ))}
-      </div>
+      </div> 
       <div className=" flex flex-col h-full w-full bg-[#161623]">
         <AnimeMain  setError={setError}/>
 
