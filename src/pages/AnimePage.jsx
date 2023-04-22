@@ -63,9 +63,9 @@ export default function AnimePage() {
 
       <h3 className="text-xl font-extrabold my-4 flex items-center justify-center">Top Animes Now</h3>
       {/* <button onClick={()=>dispatch(clearTopAnime())}>cleare</button> */}
-        {topAnimes[0] && topAnimes[0]?.map((item,index)=>(
+        {/* {topAnimes[0] && topAnimes[0]?.map((item,index)=>(
            <Sidebar key={index} {...item} />
-        ))}
+        ))} */}
       </div> 
       <div className=" flex flex-col h-full w-full bg-[#161623]">
         <AnimeMain  setError={setError}/>
