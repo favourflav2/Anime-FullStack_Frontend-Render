@@ -35,7 +35,7 @@ export default function MyFavoriteAnime() {
 
   React.useEffect(() => {
     dispatch(bestAnime());
-  }, [dispatch]);
+  }, []);
 
    React.useEffect(() => {
 
