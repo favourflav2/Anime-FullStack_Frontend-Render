@@ -17,18 +17,16 @@ export default function Home() {
  
   
 
-  React.useEffect(()=>{
-    dispatch(topAnimeQuery(homePage))
-  },[dispatch,homePage])
+   React.useEffect(()=>{
+     dispatch(topAnimeQuery(homePage))
+   },[dispatch,homePage])
 
-  React.useEffect(()=>{
-    dispatch(setUpdatedUser())
-  },[dispatch])
+   React.useEffect(()=>{
+     dispatch(setUpdatedUser())
+      },[dispatch])
 
  
 
-
-  
 
   
   return (
